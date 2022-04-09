@@ -84,7 +84,7 @@ DATABASES = {
         'PORT': '5432',
     }
 }
-DATABASES['default'] = dj_database_url.config(default='postgres://pclwmdxzoghmlj:0b7b77cb6d23ffad8bcae037af1cb874972dd17ff18f5f641cf0a9f336db0818@ec2-34-207-12-160.compute-1.amazonaws.com:5432/dq55fvh5ap36v')
+
 
 # Password validation
 # https://docs.djangoproject.com/en/4.0/ref/settings/#auth-password-validators
