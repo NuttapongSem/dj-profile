@@ -1,0 +1,54 @@
+{% extends 'components/base.html' %}
+{% load static %}
+{% block content %}
+    <section class="main">
+        <div class="main-box">
+            <div class="row" style="margin: 20px">
+                <h2 style="color: azure">Hi , I 'am Sem <br><span>Nuttapong Inphinit</span></h2>
+                <h3 style="color: azure">Developer</h3>
+                <p style="color: azure;font-size: 18px;padding: 24px">I want to learn everything to improve myself.
+                    Because it
+                    will build confidence for me make me grow more.</p>
+                {% comment %} <a href="project.html" class="btn">My works</a> {% endcomment %}
+            </div>
+            <div style="text-align: center">
+                <img src="{% static 'image_profile/S__3661826.png' %}">
+            </div>
+        </div>
+    </section>
+    <section class="cards">
+        <h2 class="main-title">My Skills</h2>
+        <div class="content">
+            {% for skill in skills %}
+                <div class="col-2 card">
+                    <div class="icon">
+                        <i class="bi bi-laptop"></i>
+                    </div>
+                    <div class="info">
+                        <h3 style="text-align: center">{{ skill.name_skill }}</h3>
+                        <h3 style="text-align: center;font-size: 14px">{{ skill.date_created|date:"M d, Y" }}</h3>
+                    </div>
+                </div>
+            {% endfor %}
+        </div>
+        <div style="margin-top: 20px">
+            <h2 class="main-title">Contact Me</h2>
+            <div class="content">
+                <div class="card2">
+                    <div class="icon">
+                        <i class="bi bi-geo-alt"></i>
+                    </div>
+                    <div class="info">
+                        <h3>Email</h3>
+                        <p><i class="bi bi-envelope"></i> : nattapong.sem@gmail.com</p>
+                        <h3>Tell.</h3>
+                        <p><i class="bi bi-telephone"></i> : 095-3193444</p>
+                        <h3>Facebook :
+                            <a href="https://web.facebook.com/nuttpong.inpinit"><i class="bi bi-facebook"></i></a>
+                        </h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+{% endblock %}
